@@ -1,0 +1,11 @@
+- hosts: wordpress
+  become: true
+  remote_user: ansible
+  become_method: sudo
+  become_user: root
+
+  roles:
+    - server
+    - php
+    - mysql
+    - wordpress
